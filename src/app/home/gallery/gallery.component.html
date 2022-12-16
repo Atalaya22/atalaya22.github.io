@@ -1,6 +1,6 @@
 <div class="gallery">
   <div *ngFor="let project of projectList" class="container">
-    <img [src]="project.coverImageSrc" class="image" />
+    <img [src]="project.coverImageSrc" class="image" [alt]="project.name" />
     <div class="overlay">
       <p class="text">{{ project.name }}</p>
     </div>
