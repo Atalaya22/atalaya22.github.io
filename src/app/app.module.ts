@@ -10,13 +10,7 @@ import { GalleryComponent } from './home/gallery/gallery.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ErrorComponent,
-    HeaderComponent,
-    GalleryComponent,
-  ],
+  declarations: [AppComponent, HomeComponent, ErrorComponent, HeaderComponent, GalleryComponent],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

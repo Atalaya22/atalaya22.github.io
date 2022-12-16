@@ -7,7 +7,7 @@ import { Project, PROJECT_LIST_NAMES } from './gallery.model';
   styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent {
-  projectList: Project[] = PROJECT_LIST_NAMES.map((pName) => ({
+  projectList: Project[] = PROJECT_LIST_NAMES.map(pName => ({
     name: pName,
     coverImageSrc: this.buildCoverImageSrc(pName),
   }));
