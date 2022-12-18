@@ -1,0 +1,7 @@
+<div *ngIf="project; else errorProject">
+  <img src="assets/images/projects/{{ project.id }}/{{ project.id }}.jpg" [alt]="project.id" />
+</div>
+
+<ng-template #errorProject>
+  <app-error></app-error>
+</ng-template>

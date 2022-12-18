@@ -8,9 +8,10 @@ import { ErrorComponent } from './error/error.component';
 import { HeaderComponent } from './header/header.component';
 import { GalleryComponent } from './home/gallery/gallery.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProjectDetailsComponent } from './home/gallery/project-details/project-details.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ErrorComponent, HeaderComponent, GalleryComponent],
+  declarations: [AppComponent, HomeComponent, ErrorComponent, HeaderComponent, GalleryComponent, ProjectDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

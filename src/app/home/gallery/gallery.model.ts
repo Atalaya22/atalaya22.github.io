@@ -1,11 +1,12 @@
 export enum ProjectName {
-  FLAMEDRAMON = 'Flamedramon',
-  WARGREYMON = 'Wargreymon',
-  METALGARURUMON = 'MetalGarurumon',
-  CLONEKIM = 'CloneKim',
+  FLAMEDRAMON = 'flamedramon',
+  WARGREYMON = 'wargreymon',
+  METALGARURUMON = 'metalgarurumon',
+  CLONETROOPER = 'clonetrooper',
 }
 
 export interface ProjectDetails {
+  id: ProjectName;
   displayName: string;
   coverImageSrc: string;
   // publishDate: Date;
@@ -15,20 +16,24 @@ export interface ProjectDetails {
 
 export const PROJECT_DETAILS: Record<ProjectName, ProjectDetails> = {
   [ProjectName.FLAMEDRAMON]: {
+    id: ProjectName.FLAMEDRAMON,
     displayName: 'Flamedramon',
     coverImageSrc: buildCoverImageSrc(ProjectName.FLAMEDRAMON),
   },
   [ProjectName.WARGREYMON]: {
+    id: ProjectName.WARGREYMON,
     displayName: 'Wargreymon',
     coverImageSrc: buildCoverImageSrc(ProjectName.WARGREYMON),
   },
   [ProjectName.METALGARURUMON]: {
+    id: ProjectName.METALGARURUMON,
     displayName: 'MetalGarurumon',
     coverImageSrc: buildCoverImageSrc(ProjectName.METALGARURUMON),
   },
-  [ProjectName.CLONEKIM]: {
+  [ProjectName.CLONETROOPER]: {
+    id: ProjectName.CLONETROOPER,
     displayName: 'Clone Trooper',
-    coverImageSrc: buildCoverImageSrc(ProjectName.CLONEKIM),
+    coverImageSrc: buildCoverImageSrc(ProjectName.CLONETROOPER),
   },
 };
 
@@ -40,7 +45,7 @@ const PROJECTS_TO_DISPLAY: ProjectName[] = [
   ProjectName.FLAMEDRAMON,
   ProjectName.WARGREYMON,
   ProjectName.METALGARURUMON,
-  ProjectName.CLONEKIM,
+  ProjectName.CLONETROOPER,
 ];
 
 export const PROJECTS_TO_DISPLAY_INFO: ProjectDetails[] = PROJECTS_TO_DISPLAY.map(
