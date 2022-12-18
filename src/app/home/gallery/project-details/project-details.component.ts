@@ -8,14 +8,16 @@ import { ProjectDetails, ProjectName, PROJECT_DETAILS } from '../gallery.model';
   styleUrls: ['./project-details.component.scss'],
 })
 export class ProjectDetailsComponent implements OnInit {
-  project?: ProjectDetails;
+  project!: ProjectDetails;
+  projectImagesIds!: number[];
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     const projectId = this.route.snapshot.paramMap.get('projectId');
-    if (projectId) {
-      this.project = PROJECT_DETAILS[projectId as ProjectName];
-    }
+    this.project = PROJECT_DETAILS[projectId as ProjectName];
+    this.projectImagesIds = Array(this.project.nImages - 1)
+      .fill(0)
+      .map((_, i) => i + 1);
   }
 }
