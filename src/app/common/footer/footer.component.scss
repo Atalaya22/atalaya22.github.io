@@ -1,0 +1,15 @@
+@import 'scss/variables';
+
+$footer-height: 6rem;
+
+.container {
+  background-color: $footer-background-color;
+  height: $footer-height;
+  width: 100%;
+  text-align: center;
+
+  .copyright-text {
+    line-height: $footer-height;
+    vertical-align: middle;
+  }
+}

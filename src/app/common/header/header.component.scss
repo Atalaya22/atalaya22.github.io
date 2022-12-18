@@ -1,6 +1,7 @@
+@import 'scss/variables';
+
 .header {
-  background-color: rgb(125, 125, 125);
-  color: white;
+  background-color: $header-background-color;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -21,13 +22,13 @@
       gap: 1.5rem;
 
       a {
-        color: white;
+        color: $text-primary-color;
         text-decoration: none;
         transition: color 0.1s ease-out;
       }
 
       a:hover {
-        color: red;
+        color: $text-active-color;
       }
     }
   }

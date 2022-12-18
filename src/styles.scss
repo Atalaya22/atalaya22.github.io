@@ -33,6 +33,7 @@ $portafolio-theme: mat.define-light-theme(
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($portafolio-theme);
+@import 'scss/variables';
 
 html,
 body {
@@ -41,7 +42,7 @@ body {
 body {
   margin: 0;
   font-family: 'Lato', 'Helvetica Neue', sans-serif;
-  color: white;
+  color: $text-primary-color;
   scroll-behavior: smooth;
-  background-color: rgb(22, 22, 22);
+  background-color: $background-color;
 }
