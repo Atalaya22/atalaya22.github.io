@@ -1,7 +1,6 @@
 @import 'scss/variables';
 
 .gallery {
-  margin: 1rem 10vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;

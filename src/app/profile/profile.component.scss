@@ -1,0 +1,52 @@
+@import 'scss/variables';
+
+.container {
+  display: flex;
+
+  .info {
+    flex: 1;
+    font-size: larger;
+  }
+
+  .spacer {
+    height: 2rem;
+  }
+
+  .profile-image {
+    flex: 1;
+    width: 25vw;
+    height: 90vh;
+    margin-left: 1rem;
+    object-fit: cover;
+  }
+
+  .skill-info {
+    width: 5rem;
+
+    .skill-image {
+      width: 5rem;
+    }
+
+    .skill-text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .contact-info {
+    width: 5rem;
+
+    .contact-text {
+      width: 100%;
+      text-align: center;
+    }
+    .contact-image {
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-primary-color;
+    }
+  }
+}

@@ -1,1 +1,25 @@
-<p>profile works!</p>
+<div class="container">
+  <div class="info">
+    <h1>{{ profileInfo.name }}</h1>
+    <p>{{ profileInfo.description }}</p>
+
+    <div class="spacer"></div>
+
+    <h2>Here are some of my skills</h2>
+    <div *ngFor="let skill of profileInfo.skills" class="skill-info">
+      <img [src]="skill.iconSrc" class="skill-icon" class="skill-image" />
+      <p class="skill-text">{{ skill.name }}</p>
+    </div>
+
+    <div class="spacer"></div>
+
+    <h2>Contact me now via</h2>
+    <div *ngFor="let contactForm of profileInfo.contactForms" class="contact-info">
+      <a [href]="contactForm.linkToSource">
+        <img [src]="contactForm.iconSrc" class="contact-image" />
+        <p class="contact-text">{{ contactForm.name }}</p>
+      </a>
+    </div>
+  </div>
+  <img src="assets/images/profile.png" alt="Profile photo" class="profile-image" />
+</div>
