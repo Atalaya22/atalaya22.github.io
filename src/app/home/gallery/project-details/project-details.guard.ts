@@ -10,11 +10,20 @@ export class ProjectDetailsGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot): boolean {
     const projectId = route.paramMap.get('projectId');
-    const existsProject = (Object as any).values(ProjectName).includes(projectId);
-    if (!projectId || !existsProject) {
-      this.router.navigate(['/projects']);
-      return false;
+    if (!projectId) {
+      return this.redirectToError();
     }
-    return !!projectId;
+
+    const existsProject = (Object as any).values(ProjectName).includes(projectId);
+    if (!existsProject) {
+      return this.redirectToError();
+    }
+
+    return true;
+  }
+
+  private redirectToError(): boolean {
+    this.router.navigate(['/projects']);
+    return false;
   }
 }
