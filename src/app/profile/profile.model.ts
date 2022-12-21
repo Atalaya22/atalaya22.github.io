@@ -24,17 +24,26 @@ export const PROFILE_INFO: ProfileInfo = {
     'Fugiat do veniam anim non cupidatat est do ea minim. Velit laborum deserunt amet sit nulla ' +
     'cupidatat ullamco ex. Irure esse dolor reprehenderit deserunt excepteur anim deserunt exercitation. ' +
     'Et adipisicing sit laboris ad commodo qui voluptate incididunt ad sunt amet sit velit.',
+  skills: [
+    {
+      name: '3DS Max',
+      iconSrc: 'assets/images/logos/3dsmax.png',
+    },
+    {
+      name: 'Photoshop',
+      iconSrc: 'assets/images/logos/photoshop.png',
+    },
+  ],
   contactForms: [
     {
       name: 'Artstation',
       linkToSource: 'https://joaquinvillena.artstation.com/',
       iconSrc: 'assets/images/logos/artstation.png',
     },
-  ],
-  skills: [
     {
-      name: '3DS Max',
-      iconSrc: 'assets/images/logos/3dsmax.png',
+      name: 'Mail',
+      linkToSource: 'mailto:ejvillena22@gmail.com',
+      iconSrc: 'assets/images/logos/mail.png',
     },
   ],
 };
