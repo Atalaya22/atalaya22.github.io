@@ -1,0 +1,55 @@
+@import 'scss/variables';
+
+.container {
+  backdrop-filter: blur(10px);
+  background-color: $floating-background-color;
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  scale: 0.9;
+}
+
+.icon {
+  width: 2rem;
+  aspect-ratio: 1;
+}
+
+.button {
+  border-radius: 100%;
+  padding: 1rem;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: $floating-background-color;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .container {
+    scale: 0.9;
+  }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .container {
+    scale: 0.8;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .container {
+    scale: 0.8;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .container {
+    scale: 0.7;
+  }
+}

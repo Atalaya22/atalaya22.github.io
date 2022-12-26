@@ -1,11 +1,18 @@
 <div class="container">
   <div class="info">
+    <p>Hello, I'm</p>
     <h1>{{ profileInfo.name }}</h1>
     <p>{{ profileInfo.description }}</p>
 
-    <div class="spacer"></div>
+    <div class="buttons">
+      <button class="button cv" (click)="downloadCV()">
+        <img src="assets/icons/cv.svg" alt="curriculum vitae icon" />
+        Download CV
+      </button>
+      <a class="button" href="#gallery"> See projects </a>
+    </div>
 
-    <!-- TODO: CHANGE THIS TO A GRID, IT WILL MAINTAIN THE TEXT VERTICAL POSITION -->
+    <!-- <div class="spacer"></div>
 
     <h2>Here are some of my skills</h2>
     <div class="skill-container">
@@ -25,7 +32,7 @@
           <p class="contact-text">{{ contactForm.name }}</p>
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
   <img src="assets/images/profile.png" alt="Profile photo" class="profile-image" />
 </div>

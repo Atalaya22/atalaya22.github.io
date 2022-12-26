@@ -1,9 +1,17 @@
 @import 'scss/variables';
 
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
+  margin-bottom: 5rem;
 
   .container {
     position: relative;

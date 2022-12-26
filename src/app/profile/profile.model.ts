@@ -19,11 +19,7 @@ export interface ContactForm {
 export const PROFILE_INFO: ProfileInfo = {
   name: 'Joaquín Villena',
   description:
-    'Elit velit laboris laboris deserunt voluptate fugiat occaecat minim laboris voluptate. ' +
-    'Adipisicing aliquip labore do ipsum voluptate ex dolore. Id dolor id exercitation minim. ' +
-    'Fugiat do veniam anim non cupidatat est do ea minim. Velit laborum deserunt amet sit nulla ' +
-    'cupidatat ullamco ex. Irure esse dolor reprehenderit deserunt excepteur anim deserunt exercitation. ' +
-    'Et adipisicing sit laboris ad commodo qui voluptate incididunt ad sunt amet sit velit.',
+    '3D Artist and Video Game Developer',
   skills: [
     {
       name: '3DS Max',

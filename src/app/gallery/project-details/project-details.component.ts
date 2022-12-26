@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { ProjectDetails, ProjectName, PROJECT_DETAILS } from '../gallery.model';
 
@@ -9,15 +10,10 @@ import { ProjectDetails, ProjectName, PROJECT_DETAILS } from '../gallery.model';
 })
 export class ProjectDetailsComponent implements OnInit {
   project!: ProjectDetails;
-  projectImagesIds!: number[];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(@Inject(MAT_DIALOG_DATA) private data: ProjectName) {}
 
   ngOnInit() {
-    const projectId = this.route.snapshot.paramMap.get('projectId');
-    this.project = PROJECT_DETAILS[projectId as ProjectName];
-    this.projectImagesIds = Array(this.project.nImages - 1)
-      .fill(0)
-      .map((_, i) => i + 1);
+    this.project = PROJECT_DETAILS[this.data];
   }
 }

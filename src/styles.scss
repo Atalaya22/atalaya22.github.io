@@ -38,6 +38,7 @@ $portafolio-theme: mat.define-light-theme(
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -45,4 +46,9 @@ body {
   color: $text-primary-color;
   scroll-behavior: smooth;
   background-color: $background-color;
+  background-image: url("assets/images/background2.png");
+}
+
+.mat-mdc-dialog-surface {
+  border-radius: 0px !important;
 }

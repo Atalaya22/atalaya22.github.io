@@ -51,6 +51,14 @@ const PROJECTS_TO_DISPLAY: ProjectName[] = [
   ProjectName.WARGREYMON,
   ProjectName.METALGARURUMON,
   ProjectName.CLONETROOPER,
+  ProjectName.FLAMEDRAMON,
+  ProjectName.WARGREYMON,
+  ProjectName.METALGARURUMON,
+  ProjectName.CLONETROOPER,
+  ProjectName.FLAMEDRAMON,
+  ProjectName.WARGREYMON,
+  ProjectName.METALGARURUMON,
+  ProjectName.CLONETROOPER,
 ];
 
 export const PROJECTS_TO_DISPLAY_INFO: ProjectDetails[] = PROJECTS_TO_DISPLAY.map(
