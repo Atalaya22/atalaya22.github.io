@@ -37,7 +37,7 @@
       font-size: 1rem;
       text-decoration: none;
     }
-    
+
     .cv {
       background-color: transparent;
     }
@@ -58,6 +58,21 @@
     // mask-repeat: no-repeat;
     // -webkit-mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8c3ZnIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik01OCwtMjEuNEM2NS4zLDMuNSw1NC41LDMxLjgsMzMuNyw0Ni45QzEzLDYyLjEsLTE3LjUsNjQuMiwtMzYuMyw1MC40Qy01NSwzNi43LC02MS45LDcuMiwtNTMuOCwtMTguOEMtNDUuOCwtNDQuOCwtMjIuOSwtNjcuMiwxLjIsLTY3LjZDMjUuNCwtNjgsNTAuOCwtNDYuNCw1OCwtMjEuNFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCAxMDApIiAvPgo8L3N2Zz4K);
     // -webkit-mask-repeat: no-repeat;
+  }
+
+  /* Landscape phone to portrait tablet */
+  @media (max-width: 767px) {
+    .profile-image {
+      display: none;
+    }
+    .buttons {
+      justify-content: center;
+    }
+
+    .center-mobile {
+      text-align: center;
+      width: 100%;
+    }
   }
 
   // .skill-container {
