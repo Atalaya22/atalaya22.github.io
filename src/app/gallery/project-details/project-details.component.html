@@ -1,14 +1,12 @@
-  <!-- <div class="cover-container"> -->
-        <img
-          src="assets/images/projects/{{ project.id }}/{{ project.id }}0.jpg"
-          [alt]="project.displayName + ' cover image'"
-          class="cover-image"
-        />
-    <!-- <span class="cover-title">{{ project.displayName }}</span>
-  </div>
-  <img
-    *ngFor="let imageId of projectImagesIds"
-    src="assets/images/projects/{{ project.id }}/{{ project.id }}{{ imageId }}.jpg"
-    [alt]="project.displayName + ' ' + imageId"
-    class="cover-image"
-  /> -->
+<img
+  src="assets/images/projects/{{ project.id }}/{{ project.id }}{{ currentId }}.jpg"
+  [alt]="project.displayName + ' cover image'"
+  class="cover-image"
+/>
+
+<button (click)="previous()" *ngIf="canGoPrevious()" class="button previous">
+  <img src="assets/icons/arrow-previous.svg" alt="previous button icon" class="icon" />
+</button>
+<button (click)="next()" *ngIf="canGoNext()" class="button next">
+  <img src="assets/icons/arrow-next.svg" alt="next button icon" class="icon" />
+</button>
