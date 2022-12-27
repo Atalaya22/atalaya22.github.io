@@ -1,9 +1,8 @@
 <h1 class="title">Gallery</h1>
 <div class="gallery">
-  <a *ngFor="let project of projectList" class="container" (click)="openProject(project.id)">
-    <img [src]="project.coverImageSrc" class="image" [alt]="project.displayName" />
-    <div class="overlay">
-      <p class="text">{{ project.displayName }}</p>
-    </div>
-  </a>
+  <app-project-display
+    *ngFor="let project of projectList"
+    [project]="project"
+    class="project-display"
+  ></app-project-display>
 </div>

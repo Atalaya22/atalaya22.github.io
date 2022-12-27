@@ -13,6 +13,7 @@ import { FooterComponent } from './common/footer/footer.component';
 import { FloatingMenuComponent } from './floating-menu/floating-menu.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ContactComponent } from './contact/contact.component';
+import { ProjectDisplayComponent } from './gallery/project-display/project-display.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     FloatingMenuComponent,
     ContactComponent,
+    ProjectDisplayComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatDialogModule],
   providers: [],

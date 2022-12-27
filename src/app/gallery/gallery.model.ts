@@ -43,7 +43,7 @@ export const PROJECT_DETAILS: Record<ProjectName, ProjectDetails> = {
 };
 
 function buildCoverImageSrc(projectName: ProjectName): string {
-  return `assets/images/projects/${projectName}/${projectName}0.jpg`;
+  return `assets/images/projects/${projectName}/${projectName}`;
 }
 
 const PROJECTS_TO_DISPLAY: ProjectName[] = [

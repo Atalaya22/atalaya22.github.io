@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { ProjectDetails, ProjectName, PROJECTS_TO_DISPLAY_INFO } from './gallery.model';
-import { MatDialog } from '@angular/material/dialog';
-import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { ProjectDetails, PROJECTS_TO_DISPLAY_INFO } from './gallery.model';
 
 @Component({
   selector: 'app-gallery',
@@ -11,9 +9,5 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 export class GalleryComponent {
   projectList: ProjectDetails[] = PROJECTS_TO_DISPLAY_INFO;
 
-  constructor(public dialog: MatDialog) {}
 
-  openProject(id: ProjectName) {
-    this.dialog.open(ProjectDetailsComponent, { data: id });
-  }
 }

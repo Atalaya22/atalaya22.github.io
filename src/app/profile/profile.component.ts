@@ -11,10 +11,6 @@ export class ProfileComponent {
   profileInfo = PROFILE_INFO;
   constructor(private router: Router) {}
 
-  downloadCV() {
-    console.log('Downloading CV... not yet implemented');
-  }
-
   scrollTo(fragment: string) {
     this.router.navigate([], { fragment });
   }

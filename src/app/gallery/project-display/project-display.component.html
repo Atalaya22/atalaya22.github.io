@@ -1,0 +1,12 @@
+<a class="container" (click)="openProject(project.id)">
+  <img
+    *ngFor="let image of slides; let i = index"
+    [src]="project.coverImageSrc + image + '.jpg'"
+    [alt]="project.displayName"
+    class="image"
+    [ngStyle]="{'opacity': i === currentSlide ? '1' : '0'}"
+  />
+  <div class="overlay">
+    <p class="text">{{ project.displayName }}</p>
+  </div>
+</a>
