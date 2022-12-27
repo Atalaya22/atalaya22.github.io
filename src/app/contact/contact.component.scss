@@ -30,5 +30,11 @@
     line-height: 3rem;
     width: fit-content;
     padding: 0 1rem;
+    cursor: pointer;
+    transition: filter 0.1s ease-in-out;
+  }
+
+  .submit-btn:hover {
+    filter: brightness(1.2);
   }
 }
