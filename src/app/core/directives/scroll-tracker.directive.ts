@@ -1,12 +1,11 @@
-import { Directive, HostListener, ElementRef } from '@angular/core';
+import { Directive, HostListener } from '@angular/core';
 import { ScrollTrackerService } from '../services/scroll-tracker.service';
 
 @Directive({
-  selector: '[appScrollTracker]'
+  selector: '[appScrollTracker]',
 })
 export class ScrollTrackerDirective {
-
-  constructor(private element: ElementRef, private scrollTrackerService: ScrollTrackerService) { }
+  constructor(private scrollTrackerService: ScrollTrackerService) {}
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any) {
@@ -16,5 +15,4 @@ export class ScrollTrackerDirective {
     // Pass the scroll percentage to the service
     this.scrollTrackerService.setScrollPosition(currentScrollPosition);
   }
-
 }
