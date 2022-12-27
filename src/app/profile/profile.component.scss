@@ -38,11 +38,11 @@
       text-decoration: none;
       transition: filter 0.1s ease-in-out;
     }
-    
+
     .button:hover {
       filter: brightness(1.2);
     }
-    
+
     .cv {
       background-color: transparent;
       transition: background-color 0.1s ease-in-out;
@@ -53,10 +53,6 @@
     }
   }
 
-  // .spacer {
-  //   height: 2rem;
-  // }
-
   .profile-image {
     flex: 1;
     width: 25vw;
@@ -64,10 +60,6 @@
     margin-left: 1rem;
     object-fit: cover;
     border-radius: 2rem;
-    // mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8c3ZnIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik01OCwtMjEuNEM2NS4zLDMuNSw1NC41LDMxLjgsMzMuNyw0Ni45QzEzLDYyLjEsLTE3LjUsNjQuMiwtMzYuMyw1MC40Qy01NSwzNi43LC02MS45LDcuMiwtNTMuOCwtMTguOEMtNDUuOCwtNDQuOCwtMjIuOSwtNjcuMiwxLjIsLTY3LjZDMjUuNCwtNjgsNTAuOCwtNDYuNCw1OCwtMjEuNFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCAxMDApIiAvPgo8L3N2Zz4K);
-    // mask-repeat: no-repeat;
-    // -webkit-mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8c3ZnIHZpZXdCb3g9IjAgMCAyMDAgMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik01OCwtMjEuNEM2NS4zLDMuNSw1NC41LDMxLjgsMzMuNyw0Ni45QzEzLDYyLjEsLTE3LjUsNjQuMiwtMzYuMyw1MC40Qy01NSwzNi43LC02MS45LDcuMiwtNTMuOCwtMTguOEMtNDUuOCwtNDQuOCwtMjIuOSwtNjcuMiwxLjIsLTY3LjZDMjUuNCwtNjgsNTAuOCwtNDYuNCw1OCwtMjEuNFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCAxMDApIiAvPgo8L3N2Zz4K);
-    // -webkit-mask-repeat: no-repeat;
   }
 
   /* Landscape phone to portrait tablet */
@@ -84,53 +76,4 @@
       width: 100%;
     }
   }
-
-  // .skill-container {
-  //   display: flex;
-  //   flex-direction: row;
-  //   gap: 1rem;
-
-  //   .skill-info {
-  //     width: 5rem;
-  //     display: flex;
-  //     flex-direction: column;
-  //     align-items: center;
-
-  //     .skill-image {
-  //       width: 3rem;
-  //     }
-
-  //     .skill-text {
-  //       width: 100%;
-  //       text-align: center;
-  //     }
-  //   }
-  // }
-
-  // .contact-container {
-  //   display: flex;
-  //   flex-direction: row;
-  //   gap: 1rem;
-
-  //   .contact-info {
-  //     width: 5rem;
-
-  //     .contact-image {
-  //       width: 3rem;
-  //     }
-
-  //     .contact-text {
-  //       width: 100%;
-  //       text-align: center;
-  //     }
-
-  //     a {
-  //       text-decoration: none;
-  //       color: $text-primary-color;
-  //       display: flex;
-  //       flex-direction: column;
-  //       align-items: center;
-  //     }
-  //   }
-  // }
 }
