@@ -1,5 +1,7 @@
 @import 'scss/variables';
 
+$border-width: 1px;
+
 .container {
   backdrop-filter: blur(10px);
   background-color: $floating-background-color;
@@ -9,21 +11,26 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   scale: 0.9;
-}
 
-.icon {
-  width: 2rem;
-  aspect-ratio: 1;
-}
+  .button {
+    border: $border-width solid transparent;
+    border-radius: 100%;
+    padding: 1rem;
+    transition: background-color 0.2s;
 
-.button {
-  border-radius: 100%;
-  padding: 1rem;
-  transition: background-color 0.2s;
-}
+    &:hover {
+      background-color: $floating-background-color;
+    }
 
-.button:hover {
-  background-color: $floating-background-color;
+    .icon {
+      width: 2rem;
+      aspect-ratio: 1;
+    }
+  }
+
+  .highlighted {
+    border: $border-width solid white;
+  }
 }
 
 /* Large desktop */

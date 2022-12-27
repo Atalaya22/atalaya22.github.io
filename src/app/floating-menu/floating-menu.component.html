@@ -1,5 +1,11 @@
 <div class="container">
-  <a href="#"  class="button"> <img src="assets/icons/home.svg" alt="profile icon" class="icon" /> </a>
-  <a href="#gallery" class="button"> <img src="assets/icons/gallery.svg" alt="profile icon" class="icon" /> </a>
-  <a href="#contact" class="button"> <img src="assets/icons/contact.svg" alt="profile icon" class="icon" /> </a>
+  <a href="#" class="button" [ngClass]="{ highlighted: checkCurrentSection(0) }">
+    <img src="assets/icons/home.svg" alt="profile icon" class="icon" />
+  </a>
+  <a href="#gallery" class="button" [ngClass]="{ highlighted: checkCurrentSection(1) }">
+    <img src="assets/icons/gallery.svg" alt="pallete icon" class="icon" />
+  </a>
+  <a href="#contact" class="button" [ngClass]="{ highlighted: checkCurrentSection(2) }">
+    <img src="assets/icons/contact.svg" alt="contact icon" class="icon" />
+  </a>
 </div>

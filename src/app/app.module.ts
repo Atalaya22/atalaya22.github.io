@@ -14,6 +14,7 @@ import { FloatingMenuComponent } from './floating-menu/floating-menu.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectDisplayComponent } from './gallery/project-display/project-display.component';
+import { ScrollTrackerDirective } from './core/directives/scroll-tracker.directive';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProjectDisplayComponent } from './gallery/project-display/project-displ
     FloatingMenuComponent,
     ContactComponent,
     ProjectDisplayComponent,
+    ScrollTrackerDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatDialogModule],
   providers: [],

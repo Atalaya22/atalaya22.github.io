@@ -42,10 +42,15 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: 'Lato', 'Helvetica Neue', sans-serif;
   color: $text-primary-color;
   background-color: $background-color;
   background-image: url('assets/images/background.png');
+}
+
+textarea {
+  font-family: 'Lato', 'Helvetica Neue', sans-serif;
 }
 
 .mat-mdc-dialog-surface {
