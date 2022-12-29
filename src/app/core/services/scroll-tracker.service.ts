@@ -6,6 +6,7 @@ import { ElementRef, Injectable, QueryList } from '@angular/core';
 export class ScrollTrackerService {
   scrollPosition!: number;
   sectionsTop: number[] = [];
+  sections: ElementRef[] = [];
   currentSection = 0;
 
   constructor() {}
@@ -14,6 +15,7 @@ export class ScrollTrackerService {
     let height = 0;
     sections.forEach(v => {
       this.sectionsTop.push(height);
+      this.sections.push(v);
       height += v.nativeElement.scrollHeight;
     });
   }
@@ -31,5 +33,9 @@ export class ScrollTrackerService {
       }
     }
     this.currentSection = this.sectionsTop.length - 1;
+  }
+
+  scrollToSection(sectionIndex: number): void {
+    this.sections[sectionIndex].nativeElement.scrollIntoView({ behaviour: 'smooth', block: "start", inline: "nearest" });
   }
 }

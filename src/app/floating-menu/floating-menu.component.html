@@ -1,11 +1,10 @@
 <div class="container">
-  <a href="#" class="button" [ngClass]="{ highlighted: checkCurrentSection(0) }">
-    <img src="assets/icons/home.svg" alt="profile icon" class="icon" />
-  </a>
-  <a href="#gallery" class="button" [ngClass]="{ highlighted: checkCurrentSection(1) }">
-    <img src="assets/icons/gallery.svg" alt="pallete icon" class="icon" />
-  </a>
-  <a href="#contact" class="button" [ngClass]="{ highlighted: checkCurrentSection(2) }">
-    <img src="assets/icons/contact.svg" alt="contact icon" class="icon" />
-  </a>
+  <button
+    *ngFor="let section of sections; let i = index"
+    (click)="scrollIntoSection(i)"
+    class="button"
+    [ngClass]="{ highlighted: checkCurrentSection(i) }"
+  >
+    <img src="assets/icons/{{ section }}.svg" alt="{{ section }} icon" class="icon" />
+  </button>
 </div>

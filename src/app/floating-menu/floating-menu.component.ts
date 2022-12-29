@@ -7,9 +7,15 @@ import { ScrollTrackerService } from '../core/services/scroll-tracker.service';
   styleUrls: ['./floating-menu.component.scss'],
 })
 export class FloatingMenuComponent {
+  sections = ['home', 'gallery', 'contact'];
+
   constructor(private scrollTrackerService: ScrollTrackerService) {}
 
   checkCurrentSection(sectionIndex: number): boolean {
     return this.scrollTrackerService.checkInsideSection(sectionIndex);
+  }
+
+  scrollIntoSection(sectionIndex: number): void {
+    this.scrollTrackerService.scrollToSection(sectionIndex);
   }
 }
