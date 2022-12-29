@@ -30,13 +30,28 @@ export enum ProjectName {
   YU_GI_OH = 'yu-gi-oh',
 }
 
+export class SketchfabInfo {
+  constructor(
+    public title: string,
+    /** (!) Remember to add the `/embed?autostart=1` at the end */
+    public src: string
+  ) {}
+}
+
+export class YoutubeVideoInfo {
+  constructor(
+    public title: string,
+    /** (!) Remember to add the `?autoplay=1` at the end */
+    public src: string
+  ) {}
+}
+
 export interface ProjectDetails {
   id: ProjectName;
   displayName: string;
   nImages: number;
-  // publishDate: Date;
-  // description: string;
-  // toolsUsed?: Tool[];
+  videoInfo?: YoutubeVideoInfo;
+  sketchfabInfo?: SketchfabInfo;
 }
 
 export const PROJECT_DETAILS: Record<ProjectName, ProjectDetails> = {
@@ -64,6 +79,10 @@ export const PROJECT_DETAILS: Record<ProjectName, ProjectDetails> = {
     id: ProjectName.DESCEND_THROUGH_CARCERUM,
     displayName: 'Descend Through Carcerum',
     nImages: 8,
+    videoInfo: new YoutubeVideoInfo(
+      'Descend through Carcerum Teaser Trailer',
+      'https://www.youtube.com/embed/I9Gw-kn_eSE?autoplay=1'
+    ),
   },
   [ProjectName.DRAG_THEM_OUT_INTO_SPACE]: {
     id: ProjectName.DRAG_THEM_OUT_INTO_SPACE,
@@ -74,6 +93,10 @@ export const PROJECT_DETAILS: Record<ProjectName, ProjectDetails> = {
     id: ProjectName.FFVII_SWORD,
     displayName: 'Final Fantasy VII Sword',
     nImages: 2,
+    sketchfabInfo: new SketchfabInfo(
+      'Cloud Sword FFVII',
+      'https://sketchfab.com/models/ccd4423cfd1c46beb54aa3436b193a0c/embed?autostart=1'
+    ),
   },
   [ProjectName.HAND_DRAWN]: {
     id: ProjectName.HAND_DRAWN,

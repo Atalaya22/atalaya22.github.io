@@ -1,8 +1,35 @@
-  <img
-    src="assets/images/projects/{{ project.id }}/{{ project.id }}{{ currentId }}.jpg"
-    [alt]="project.displayName + ' cover image'"
-    class="cover-image"
-  />
+<iframe
+  *ngIf="isSketchfab"
+  [src]="contentSrc"
+  [title]="contentTitle"
+  frameborder="0"
+  allowfullscreen
+  mozallowfullscreen="true"
+  webkitallowfullscreen="true"
+  allow="autoplay; fullscreen; xr-spatial-tracking"
+  xr-spatial-tracking
+  execution-while-out-of-viewport
+  execution-while-not-rendered
+  web-share
+  class="sketchfab-display"
+></iframe>
+
+<iframe
+  *ngIf="isVideo"
+  [src]="contentSrc"
+  [title]="contentTitle"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  class="youtube-video"
+></iframe>
+
+<img
+  *ngIf="isImage"
+  src="assets/images/projects/{{ project.id }}/{{ project.id }}{{ content[currentId] }}.jpg"
+  [alt]="project.displayName + ' cover image'"
+  class="cover-image"
+/>
 
 <button (click)="previous()" *ngIf="canGoPrevious()" class="button previous">
   <img src="assets/icons/arrow-previous.svg" alt="previous button icon" class="icon" />
