@@ -15,6 +15,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectDisplayComponent } from './gallery/project-display/project-display.component';
 import { ScrollTrackerDirective } from './core/directives/scroll-tracker.directive';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { ScrollTrackerDirective } from './core/directives/scroll-tracker.directi
     ProjectDisplayComponent,
     ScrollTrackerDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatDialogModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatDialogModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

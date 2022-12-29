@@ -1,8 +1,20 @@
 <h1 class="title">Contact Me</h1>
 
-<form class="form">
-  <input class="input" placeholder="Your full name" value="" type="text" />
-  <input class="input" placeholder="Your email" value="" type="email" />
-  <textarea placeholder="Your message" class="input" rows="8"></textarea>
-  <button type="submit" class="submit-btn" (click)="sendMessage()">Send Message</button>
+<form class="form" [formGroup]="form" (ngSubmit)="sendMessage()">
+  <input formControlName="fullName" class="input" placeholder="Your full name" type="text" required />
+  <span *ngIf="form.get('fullName')?.invalid && (submitted || form.get('fullName')?.dirty)" class="error">
+    <img src="assets/icons/error.svg" alt="error icon" class="error-icon" />
+    Full name is required
+  </span>
+  <input formControlName="subject" class="input" placeholder="Your subject" type="email" required />
+  <span *ngIf="form.get('subject')?.invalid && (submitted || form.get('subject')?.dirty)" class="error">
+    <img src="assets/icons/error.svg" alt="error icon" class="error-icon" />
+    Subject is required
+  </span>
+  <textarea formControlName="body" placeholder="Your message" class="input textarea" rows="25" required> </textarea>
+  <span *ngIf="form.get('body')?.invalid && (submitted || form.get('body')?.dirty)" class="error">
+    <img src="assets/icons/error.svg" alt="error icon" class="error-icon" />
+    Body is required
+  </span>
+  <button type="submit" class="submit-btn">Send Message</button>
 </form>

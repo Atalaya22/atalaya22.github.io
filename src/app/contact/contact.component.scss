@@ -23,6 +23,11 @@
     min-height: 3rem;
   }
 
+  .textarea {
+    line-height: 1rem;
+    padding: 1rem;
+  }
+
   .submit-btn {
     background-color: $button-background-color;
     color: $text-primary-color;
@@ -37,5 +42,20 @@
 
   .submit-btn:hover {
     filter: brightness(1.2);
+  }
+
+  .error {
+    color: red;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+
+    &-icon {
+      width: 1.5rem;
+      aspect-ratio: 1;
+      margin: 0 0.5rem;
+    }
   }
 }
