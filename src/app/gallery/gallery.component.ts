@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProjectDetails, PROJECTS_TO_DISPLAY_INFO } from './gallery.model';
+import { GalleryService } from './gallery.service';
 
 @Component({
   selector: 'app-gallery',
@@ -7,7 +7,7 @@ import { ProjectDetails, PROJECTS_TO_DISPLAY_INFO } from './gallery.model';
   styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent {
-  projectList: ProjectDetails[] = PROJECTS_TO_DISPLAY_INFO;
 
+  constructor(public galleryService: GalleryService) {}
 
 }

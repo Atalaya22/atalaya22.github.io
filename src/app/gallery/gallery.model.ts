@@ -52,6 +52,31 @@ export interface ProjectDetails {
   nImages: number;
   videoInfo?: YoutubeVideoInfo;
   sketchfabInfo?: SketchfabInfo;
+  tags?: ProjectTag[];
+}
+
+export enum ProjectTag {
+  THREE_D = '3d',
+  ANIMATION = 'Animation',
+  ARCHITECTURE = 'Architecture',
+  ART = 'Art',
+  DESIGN = 'Design',
+  DEVELOPMENT = 'Development',
+  GAMES = 'Games',
+  GRAPHICS = 'Graphics',
+  ILLUSTRATION = 'Illustration',
+  MULTIMEDIA = 'Multimedia',
+  PHOTOGRAPHY = 'Photography',
+  VIDEO = 'Video',
+  WEB_DESIGN = 'Web Design',
+  WRITING = 'Writing',
+  AUDIO = 'Audio',
+  BUSINESS = 'Business',
+  EDUCATION = 'Education',
+  HEALTHCARE = 'Healthcare',
+  MARKETING = 'Marketing',
+  SCIENCE = 'Science',
+  TECHNOLOGY = 'Technology',
 }
 
 export const PROJECT_DETAILS: Record<ProjectName, ProjectDetails> = {
@@ -59,11 +84,13 @@ export const PROJECT_DETAILS: Record<ProjectName, ProjectDetails> = {
     id: ProjectName.FLAMEDRAMON,
     displayName: 'Flamedramon',
     nImages: 3,
+    tags: [ProjectTag.THREE_D, ProjectTag.ANIMATION]
   },
   [ProjectName.WARGREYMON]: {
     id: ProjectName.WARGREYMON,
     displayName: 'Wargreymon',
     nImages: 4,
+    tags: [ProjectTag.THREE_D]
   },
   [ProjectName.METALGARURUMON]: {
     id: ProjectName.METALGARURUMON,

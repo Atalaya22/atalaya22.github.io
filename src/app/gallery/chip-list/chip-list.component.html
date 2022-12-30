@@ -1,0 +1,5 @@
+  <mat-chip-listbox aria-label="Tag selection filter" multiple>
+    <mat-chip-option *ngFor="let tag of TAGS" (selectionChange)="onSelectionChange($event)" [id]="tag">
+      {{ tag }}
+    </mat-chip-option>
+  </mat-chip-listbox>
