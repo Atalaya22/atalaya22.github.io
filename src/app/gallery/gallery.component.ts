@@ -8,4 +8,6 @@ import { ProjectDetails, PROJECTS_TO_DISPLAY_INFO } from './gallery.model';
 })
 export class GalleryComponent {
   projectList: ProjectDetails[] = PROJECTS_TO_DISPLAY_INFO;
+
+
 }

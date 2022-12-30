@@ -35,14 +35,24 @@ $portafolio-theme: mat.define-light-theme(
 @include mat.all-component-themes($portafolio-theme);
 @import 'scss/variables';
 
-html,
-body {
-  height: 100%;
+html {
+  scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: 'Lato', 'Helvetica Neue', sans-serif;
   color: $text-primary-color;
-  scroll-behavior: smooth;
   background-color: $background-color;
+  background-image: url('assets/images/background.png');
+}
+
+textarea {
+  font-family: 'Lato', 'Helvetica Neue', sans-serif;
+}
+
+.mat-mdc-dialog-surface {
+  border-radius: 0px !important;
 }

@@ -2,70 +2,95 @@
 
 .container {
   display: flex;
+  margin-top: 15vh;
+  height: 85vh;
 
   .info {
     flex: 1;
     font-size: larger;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .no-margin {
+      margin-bottom: 0;
+    }
+
+    .title {
+      font-size: 3rem;
+      background: linear-gradient(
+        90deg,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(253, 29, 29, 1) 50%,
+        rgba(252, 176, 69, 1) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .font-poppins {
+      font-family: 'Poppins', 'Lato', 'Helvetica Neue', sans-serif;
+    }
   }
 
-  .spacer {
-    height: 2rem;
+  .buttons {
+    margin-top: 1rem;
+    display: flex;
+
+    .button {
+      display: grid;
+      align-items: center;
+      justify-items: center;
+
+      cursor: pointer;
+      color: $text-primary-color;
+      background-color: rgba($button-background-color, 0.5);
+      padding: 1rem;
+      border: 1px solid white;
+      border-radius: 1rem;
+      margin-right: 1rem;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: filter 0.1s ease-in-out;
+    }
+
+    .button:hover {
+      filter: brightness(1.2);
+    }
+
+    .cv {
+      background-color: transparent;
+      transition: background-color 0.1s ease-in-out;
+    }
+
+    .cv:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 
   .profile-image {
     flex: 1;
     width: 25vw;
-    height: 86vh;
+    height: 60vh;
     margin-left: 1rem;
     object-fit: cover;
+    border-radius: 2rem;
   }
 
-  .skill-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-
-    .skill-info {
-      width: 5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .skill-image {
-        width: 3rem;
-      }
-
-      .skill-text {
-        width: 100%;
-        text-align: center;
-      }
+  /* Landscape phone to portrait tablet */
+  @media (max-width: 767px) {
+    .profile-image {
+      display: none;
     }
-  }
+    .buttons {
+      justify-content: center;
+    }
 
-  .contact-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    
-    .contact-info {
-      width: 5rem;
-
-      .contact-image {
-        width: 3rem;
-      }
-
-      .contact-text {
-        width: 100%;
-        text-align: center;
-      }
-
-      a {
-        text-decoration: none;
-        color: $text-primary-color;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+    .center-mobile {
+      text-align: center;
+      width: 100%;
     }
   }
 }

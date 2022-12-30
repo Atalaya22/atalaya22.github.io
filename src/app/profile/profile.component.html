@@ -1,30 +1,14 @@
 <div class="container">
   <div class="info">
-    <h1>{{ profileInfo.name }}</h1>
-    <p>{{ profileInfo.description }}</p>
+    <p class="font-poppins no-margin  center-mobile">Hello, I'm</p>
+    <h1 class="font-poppins no-margin title  center-mobile">{{ profileInfo.name }}</h1>
+    <p class="font-poppins center-mobile">{{ profileInfo.description }}</p>
 
-    <div class="spacer"></div>
-
-    <!-- TODO: CHANGE THIS TO A GRID, IT WILL MAINTAIN THE TEXT VERTICAL POSITION -->
-
-    <h2>Here are some of my skills</h2>
-    <div class="skill-container">
-      <div *ngFor="let skill of profileInfo.skills" class="skill-info">
-        <img [src]="skill.iconSrc" class="skill-icon" class="skill-image" />
-        <p class="skill-text">{{ skill.name }}</p>
-      </div>
-    </div>
-
-    <div class="spacer"></div>
-
-    <h2>Contact me now via</h2>
-    <div class="contact-container">
-      <div *ngFor="let contactForm of profileInfo.contactForms" class="contact-info">
-        <a [href]="contactForm.linkToSource">
-          <img [src]="contactForm.iconSrc" class="contact-image" />
-          <p class="contact-text">{{ contactForm.name }}</p>
-        </a>
-      </div>
+    <div class="buttons">
+      <a class="button cv" href="assets/cv.pdf" target="_blank" download="Joaquin Villena CV.pdf">
+        <img src="assets/icons/cv.svg" alt="curriculum vitae icon" />
+        Download CV
+      </a>
     </div>
   </div>
   <img src="assets/images/profile.png" alt="Profile photo" class="profile-image" />

@@ -1,0 +1,10 @@
+<div class="container">
+  <button
+    *ngFor="let section of sections; let i = index"
+    (click)="scrollIntoSection(i)"
+    class="button"
+    [ngClass]="{ highlighted: checkCurrentSection(i) }"
+  >
+    <img src="assets/icons/{{ section }}.svg" alt="{{ section }} icon" class="icon" />
+  </button>
+</div>
