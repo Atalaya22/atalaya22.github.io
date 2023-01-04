@@ -16,6 +16,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectDisplayComponent } from './gallery/project-display/project-display.component';
 import { ScrollTrackerDirective } from './core/directives/scroll-tracker.directive';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ChipListComponent } from './gallery/chip-list/chip-list.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -30,8 +32,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     ProjectDisplayComponent,
     ScrollTrackerDirective,
+    ChipListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatDialogModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatChipsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
