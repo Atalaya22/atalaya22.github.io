@@ -18,6 +18,7 @@ import { ScrollTrackerDirective } from './core/directives/scroll-tracker.directi
 import { ReactiveFormsModule } from '@angular/forms';
 import { ChipListComponent } from './gallery/chip-list/chip-list.component';
 import { MatChipsModule } from '@angular/material/chips';
+import { ShowMoreButtonComponent } from './gallery/show-more-button/show-more-button.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatChipsModule } from '@angular/material/chips';
     ProjectDisplayComponent,
     ScrollTrackerDirective,
     ChipListComponent,
+    ShowMoreButtonComponent,
   ],
   imports: [
     BrowserModule,

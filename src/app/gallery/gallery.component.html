@@ -4,8 +4,11 @@
 
 <div class="gallery">
   <app-project-display
-    *ngFor="let project of galleryService.filteredProjects"
+    *ngFor="let project of galleryService.shownProjects"
     [project]="project"
     class="project-display"
   ></app-project-display>
 </div>
+<app-show-more-button
+  *ngIf="galleryService.showMode === ShowMode.SOME && galleryService.filteredProjects.length > MAX_PROJECTS_DISPLAY"
+></app-show-more-button>

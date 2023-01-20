@@ -16,7 +16,7 @@ $border-width: 1px;
     border: $border-width solid transparent;
     border-radius: 100%;
     padding: 1rem;
-    transition: background-color 0.2s;
+    transition: all 0.2s;
     background-color: transparent;
 
     &:hover {

@@ -7,7 +7,7 @@ export class ScrollTrackerService {
   scrollPosition!: number;
   sectionsTop: number[] = [];
   sections: ElementRef[] = [];
-  currentSection = 0;
+  public currentSection = 0;
 
   constructor() {}
 
@@ -18,10 +18,6 @@ export class ScrollTrackerService {
       this.sections.push(v);
       height += v.nativeElement.scrollHeight;
     });
-  }
-
-  checkInsideSection(sectionIndex: number): boolean {
-    return this.currentSection === sectionIndex;
   }
 
   setScrollPosition(scrollPercentage: number) {

@@ -9,11 +9,7 @@ import { ScrollTrackerService } from '../core/services/scroll-tracker.service';
 export class FloatingMenuComponent {
   sections = ['home', 'gallery', 'contact'];
 
-  constructor(private scrollTrackerService: ScrollTrackerService) {}
-
-  checkCurrentSection(sectionIndex: number): boolean {
-    return this.scrollTrackerService.checkInsideSection(sectionIndex);
-  }
+  constructor(public scrollTrackerService: ScrollTrackerService) {}
 
   scrollIntoSection(sectionIndex: number): void {
     this.scrollTrackerService.scrollToSection(sectionIndex);

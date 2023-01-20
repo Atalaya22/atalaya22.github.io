@@ -1,3 +1,5 @@
+export const MAX_PROJECTS_DISPLAY = 12;
+
 export enum ProjectName {
   DITTO = 'ditto',
   FLAMEDRAMON = 'flamedramon',
@@ -278,3 +280,8 @@ const PROJECTS_TO_DISPLAY: ProjectName[] = Object.keys(PROJECT_DETAILS).map(v =>
 export const PROJECTS_TO_DISPLAY_INFO: ProjectDetails[] = PROJECTS_TO_DISPLAY.map(
   projectName => PROJECT_DETAILS[projectName]
 );
+
+export enum ShowMode {
+  ALL,
+  SOME
+}
