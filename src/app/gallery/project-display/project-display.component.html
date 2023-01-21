@@ -1,4 +1,4 @@
-<a class="project" (click)="openProject(project.id)">
+<a [class]="'project-' + project.id" (click)="openProject(project.id)">
   <img
     [src]="'assets/images/projects/' + project.id + '/' + project.id + currentSlide + '.webp'"
     [alt]="project.displayName"
