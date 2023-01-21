@@ -1,4 +1,4 @@
-<a [class]="'project-' + project.id" (click)="openProject(project.id)">
+<button [class]="'project-' + project.id" (click)="openProject(project.id)">
   <img
     [src]="'assets/images/projects/' + project.id + '/' + project.id + currentSlide + '.webp'"
     [alt]="project.displayName"
@@ -7,4 +7,4 @@
   <div class="overlay">
     <p class="text">{{ project.displayName }}</p>
   </div>
-</a>
+</button>
