@@ -1,6 +1,6 @@
 @import 'scss/variables';
 
-.container {
+.project {
   height: 70vh;
 
   .image {
@@ -38,6 +38,7 @@
       text-align: center;
     }
   }
+
   .overlay:hover {
     opacity: 1;
   }
