@@ -1,4 +1,7 @@
+export const MAX_PROJECTS_DISPLAY = 12;
+
 export enum ProjectName {
+  WHISPERS_OF_INSANITY = 'whispers-of-insanity',
   DITTO = 'ditto',
   FLAMEDRAMON = 'flamedramon',
   WARGREYMON = 'wargreymon',
@@ -75,15 +78,25 @@ export enum ProjectTag {
 }
 
 export const PROJECT_DETAILS: Record<ProjectName, ProjectDetails> = {
+  [ProjectName.WHISPERS_OF_INSANITY]: {
+    id: ProjectName.WHISPERS_OF_INSANITY,
+    displayName: 'Codename: Whispers of Insanity',
+    nImages: 4,
+    tags: [ProjectTag.THREE_D, ProjectTag.ART, ProjectTag.DEVELOPMENT, ProjectTag.VIDEOGAME, ProjectTag.PROPS],
+    videoInfo: new YoutubeVideoInfo(
+      'Whispers of Insanity - Clean Trailer Demo',
+      'https://www.youtube.com/embed/bdokfe87U30?autoplay=1'
+    ),
+  },
   [ProjectName.DITTO]: {
     id: ProjectName.DITTO,
     displayName: 'Ditto',
     nImages: 2,
     tags: [ProjectTag.THREE_D, ProjectTag.FAN_ART, ProjectTag.ANIME],
     sketchfabInfo: new SketchfabInfo(
-      "Ditto メタモン (Metamon)",
-      "https://sketchfab.com/models/612e0be1914d4209b61b821aaf4529c4/embed?autostart=1"
-    )
+      'Ditto メタモン (Metamon)',
+      'https://sketchfab.com/models/612e0be1914d4209b61b821aaf4529c4/embed?autostart=1'
+    ),
   },
   [ProjectName.FLAMEDRAMON]: {
     id: ProjectName.FLAMEDRAMON,
@@ -278,3 +291,8 @@ const PROJECTS_TO_DISPLAY: ProjectName[] = Object.keys(PROJECT_DETAILS).map(v =>
 export const PROJECTS_TO_DISPLAY_INFO: ProjectDetails[] = PROJECTS_TO_DISPLAY.map(
   projectName => PROJECT_DETAILS[projectName]
 );
+
+export enum ShowMode {
+  ALL,
+  SOME,
+}

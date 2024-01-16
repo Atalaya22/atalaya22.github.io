@@ -4,30 +4,34 @@ import { ElementRef, Injectable, QueryList } from '@angular/core';
   providedIn: 'root',
 })
 export class ScrollTrackerService {
-  scrollPosition!: number;
+  scrollTopPosition!: number;
   sectionsTop: number[] = [];
   sections: ElementRef[] = [];
-  currentSection = 0;
+  public currentSection = 0;
 
   constructor() {}
 
-  setSections(sections: QueryList<ElementRef<any>>) {
-    let height = 0;
-    sections.forEach(v => {
-      this.sectionsTop.push(height);
+  setSections(sectionsList: QueryList<ElementRef<any>>) {
+    sectionsList.forEach(v => {
       this.sections.push(v);
+    });
+    this.recalculateSectionsTop();
+  }
+
+  private recalculateSectionsTop() {
+    let height = 0;
+    this.sectionsTop = [];
+    this.sections.forEach(v => {
+      this.sectionsTop.push(height);
       height += v.nativeElement.scrollHeight;
     });
   }
 
-  checkInsideSection(sectionIndex: number): boolean {
-    return this.currentSection === sectionIndex;
-  }
-
-  setScrollPosition(scrollPercentage: number) {
-    this.scrollPosition = scrollPercentage;
+  setScrollPosition(scrollTop: number) {
+    this.recalculateSectionsTop();
+    this.scrollTopPosition = scrollTop;
     for (let i = 0; i < this.sectionsTop.length; i++) {
-      if (this.scrollPosition >= this.sectionsTop[i] && this.scrollPosition < this.sectionsTop[i + 1]) {
+      if (this.scrollTopPosition >= this.sectionsTop[i] && this.scrollTopPosition < this.sectionsTop[i + 1]) {
         this.currentSection = i;
         return;
       }
@@ -36,6 +40,10 @@ export class ScrollTrackerService {
   }
 
   scrollToSection(sectionIndex: number): void {
-    this.sections[sectionIndex].nativeElement.scrollIntoView({ behaviour: 'smooth', block: "start", inline: "nearest" });
+    this.sections[sectionIndex].nativeElement.scrollIntoView({
+      behaviour: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
   }
 }

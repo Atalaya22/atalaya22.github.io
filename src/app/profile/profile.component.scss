@@ -1,6 +1,6 @@
 @import 'scss/variables';
 
-.container {
+.profile {
   display: flex;
   margin-top: 15vh;
   height: 85vh;
@@ -54,6 +54,11 @@
       font-size: 1rem;
       text-decoration: none;
       transition: filter 0.1s ease-in-out;
+
+      .icon {
+        width: 50px;
+        aspect-ratio: 1;
+      }
     }
 
     .button:hover {

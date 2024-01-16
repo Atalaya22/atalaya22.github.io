@@ -10,7 +10,7 @@ import { ProjectDetailsComponent } from '../project-details/project-details.comp
 })
 export class ProjectDisplayComponent implements OnInit {
   @Input() project!: ProjectDetails;
-  currentSlide = 0;
+  currentSlide!: number;
 
   slides!: number[];
 
@@ -18,7 +18,7 @@ export class ProjectDisplayComponent implements OnInit {
 
   ngOnInit(): void {
     this.slides = new Array(this.project.nImages).fill(0).map((_v, i) => i);
-    this.currentSlide = Math.floor(Math.random() * this.slides.length);
+    this.currentSlide = 0;
 
     setTimeout(() => this.changeCurrentSlide(), this.getRandomNumber(2000, 5000));
   }

@@ -1,9 +1,9 @@
-<div class="container">
+<div class="floating-menu">
   <button
     *ngFor="let section of sections; let i = index"
     (click)="scrollIntoSection(i)"
     class="button"
-    [ngClass]="{ highlighted: checkCurrentSection(i) }"
+    [ngClass]="{ highlighted: i === scrollTrackerService.currentSection  }"
   >
     <img src="assets/icons/{{ section }}.svg" alt="{{ section }} icon" class="icon" />
   </button>

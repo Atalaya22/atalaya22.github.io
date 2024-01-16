@@ -2,7 +2,7 @@
 
 $border-width: 1px;
 
-.container {
+.floating-menu {
   backdrop-filter: blur(10px);
   background-color: $floating-background-color;
   padding: 1rem 3rem;
@@ -16,7 +16,7 @@ $border-width: 1px;
     border: $border-width solid transparent;
     border-radius: 100%;
     padding: 1rem;
-    transition: background-color 0.2s;
+    transition: all 0.2s;
     background-color: transparent;
 
     &:hover {
@@ -36,28 +36,28 @@ $border-width: 1px;
 
 /* Large desktop */
 @media (min-width: 1200px) {
-  .container {
+  .floating-menu {
     scale: 0.9;
   }
 }
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  .container {
+  .floating-menu {
     scale: 0.8;
   }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-  .container {
+  .floating-menu {
     scale: 0.8;
   }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .container {
+  .floating-menu {
     scale: 0.7;
   }
 }

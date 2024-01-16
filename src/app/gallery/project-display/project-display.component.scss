@@ -1,6 +1,13 @@
 @import 'scss/variables';
 
-.container {
+button {
+  display: flex;
+  cursor: pointer;
+  padding: 0;
+  border-width: 0;
+}
+
+[class^='project-'] {
   height: 70vh;
 
   .image {
@@ -12,15 +19,6 @@
     opacity: 0;
 
     &:first-child {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    100% {
       opacity: 1;
     }
   }
@@ -47,6 +45,7 @@
       text-align: center;
     }
   }
+
   .overlay:hover {
     opacity: 1;
   }
